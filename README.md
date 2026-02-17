@@ -1,26 +1,26 @@
-# Portfolio Professionnel - Rafael Midolli
+# Portfolio — Guilherme Midolli
 
-Bienvenue sur le dépôt de mon portfolio professionnel. Ce projet rassemble des cas d'usage en **Business Intelligence**, **Retail Analytics** et **Data Science**.
+Portfolio pessoal de Ciência de Dados. Site estático para demonstrar habilidades técnicas, projetos acadêmicos e trajetória profissional.
 
-## 🚀 À propos du projet
+## 🚀 Sobre o projeto
 
-Il s'agit d'un site statique conçu pour démontrer des compétences techniques et une vision business, incluant :
+Site estático voltado para apresentar meu perfil como estudante de Ciência de Dados na UFABC:
 
-- **Tableaux de bord interactifs :** Intégration Python/Plotly exportée pour le web.
-- **Analyse Business :** Structuration de problèmes réels (FMCG/Retail).
-- **Performance :** Optimisé pour la rapidité, la responsivité et une architecture propre.
+- **Perfil bilíngue:** Português e Inglês (PT/EN).
+- **Projetos acadêmicos:** Análise de dados, machine learning e visualização.
+- **Design responsivo:** Otimizado para mobile e desktop.
 
-## 🛠 Stack Technique
+## 🛠 Stack Técnica
 
-- **Frontend :** HTML5, CSS3 (Design Responsif), JavaScript.
-- **Visualisation de données :** Plotly.js.
-- **Backend/Analyse :** Python (Pandas/Plotly) utilisé pour générer les rapports statiques.
+- **Frontend:** HTML5, CSS3 (Design Responsivo), JavaScript.
+- **Visualização de dados:** Plotly.js.
+- **Análise:** Python (Pandas, NumPy, Matplotlib, scikit-learn).
 
-## 🌐 Accès en ligne
+## 🌐 Acesso online
 
-Vous pouvez visualiser le portfolio en ligne ici :
-[https://r-midolli.github.io/portfolio_rafael_midolli](https://r-midolli.github.io/portfolio_rafael_midolli)
+Você pode visualizar o portfolio online aqui:
+[https://guilherme-midolli.github.io/portfolio_guilherme_midolli](https://guilherme-midolli.github.io/portfolio_guilherme_midolli)
 
 ---
 
-© 2026 Rafael Midolli
+© 2026 Guilherme Midolli

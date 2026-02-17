@@ -1,10 +1,14 @@
 <!doctype html>
-<html lang="fr" data-theme="dark" data-lang="fr">
+<html lang="pt" data-theme="dark" data-lang="pt">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<meta name="description" content="Rafael Midolli — Business Analyst orienté data. Basé en France, disponible. 4 ans d'expérience (Retail & FMCG). Portfolio avec case studies, dashboards interactifs et analyses Pareto."/>
-<title>Rafael Midolli — Business Analyst</title>
+<meta name="description" content="Guilherme Midolli — Estudante de Ciência de Dados na UFABC. Portfolio com projetos acadêmicos, análises exploratórias e dashboards interativos. Python, Pandas, Machine Learning."/>
+<title>Guilherme Midolli — Aspirante a Cientista de Dados</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>"/>
+<meta property="og:title" content="Guilherme Midolli — Aspirante a Cientista de Dados"/>
+<meta property="og:description" content="Portfolio de Ciência de Dados — projetos acadêmicos, análises exploratórias e dashboards interativos."/>
+<meta property="og:type" content="website"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
@@ -17,27 +21,27 @@
   --surface-hover:rgba(255,255,255,.10);
   --text:#f0f2f7;
   --text-muted:#7a8494;
-  --accent:#5b8cff;
-  --accent-2:#8b5cf6;
-  --accent-glow:rgba(91,140,255,.25);
+  --accent:#10b981;
+  --accent-2:#06b6d4;
+  --accent-glow:rgba(16,185,129,.25);
   --border:rgba(255,255,255,.08);
   --radius:20px;
   --font-head:'Playfair Display',Georgia,serif;
   --font-body:'DM Sans',system-ui,sans-serif;
 }
 :root[data-theme="light"]{
-  --bg:#f6f7fb;
-  --surface:rgba(255,255,255,.7);
+  --bg:#f5f7f6;
+  --surface:rgba(255,255,255,.75);
   --surface-hover:rgba(255,255,255,.92);
-  --text:#0e1320;
-  --text-muted:rgba(14,19,32,.70);
-  --border:rgba(14,19,32,.10);
-  --accent:#4f7cff;
-  --accent-2:#7b5cff;
-  --accent-glow:rgba(91,140,255,.25);
+  --text:#111827;
+  --text-muted:rgba(17,24,39,.60);
+  --border:rgba(17,24,39,.10);
+  --accent:#047857;
+  --accent-2:#0e7490;
+  --accent-glow:rgba(4,120,87,.25);
 }
-[data-lang="fr"] .lang-en{display:none}
-[data-lang="en"] .lang-fr{display:none}
+[data-lang="pt"] .lang-en{display:none}
+[data-lang="en"] .lang-pt{display:none}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{
   font-family:var(--font-body);
@@ -51,7 +55,6 @@ a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 button{font-family:inherit;cursor:pointer}
 
-/* utility */
 .nowrap{white-space:nowrap}
 
 /* ========== AMBIENT BACKGROUND ========== */
@@ -59,9 +62,9 @@ button{font-family:inherit;cursor:pointer}
   position:fixed;inset:0;z-index:0;
   pointer-events:none;
   background:
-    radial-gradient(ellipse 70% 50% at 20% 20%, rgba(91,140,255,.12) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 60% at 80% 70%, rgba(139,92,246,.10) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 40% at 60% 10%, rgba(91,140,255,.06) 0%, transparent 60%);
+    radial-gradient(ellipse 70% 50% at 20% 20%, rgba(16,185,129,.12) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 60% at 80% 70%, rgba(6,182,212,.10) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 60% 10%, rgba(16,185,129,.06) 0%, transparent 60%);
 }
 .bg-grid{
   position:fixed;inset:0;z-index:0;
@@ -105,10 +108,8 @@ button{font-family:inherit;cursor:pointer}
 :root[data-theme="light"] .nav.scrolled .logo,
 :root[data-theme="light"] .nav.scrolled .nav-links a{color:#f0f2f7}
 :root[data-theme="light"] .nav.scrolled .nav-links a:hover{background:rgba(255,255,255,.15);color:#fff}
-:root[data-theme="light"] .nav.scrolled .btn-cv,
 :root[data-theme="light"] .nav.scrolled .theme-toggle,
 :root[data-theme="light"] .nav.scrolled .lang-toggle{color:#fff;border-color:rgba(255,255,255,.3);background:transparent}
-:root[data-theme="light"] .nav.scrolled .btn-cv:hover,
 :root[data-theme="light"] .nav.scrolled .theme-toggle:hover,
 :root[data-theme="light"] .nav.scrolled .lang-toggle:hover{background:rgba(255,255,255,.2);border-color:transparent}
 
@@ -137,16 +138,7 @@ button{font-family:inherit;cursor:pointer}
   transition:color .2s, background .2s;
 }
 .nav-links a:hover{color:var(--text);background:var(--surface)}
-.nav-links a.active{color:var(--accent);background:rgba(91,140,255,.1)}
-.btn-cv{
-  font-size:.82rem;font-weight:700;
-  color:var(--accent);
-  border:1px solid rgba(91,140,255,.35);
-  padding:8px 16px;border-radius:999px;
-  transition:background .2s, border-color .2s;
-  display:inline-flex;align-items:center;gap:6px;
-}
-.btn-cv:hover{background:rgba(91,140,255,.1);border-color:var(--accent)}
+.nav-links a.active{color:var(--accent);background:var(--accent-glow)}
 
 /* ========== HERO ========== */
 .hero{
@@ -158,13 +150,13 @@ button{font-family:inherit;cursor:pointer}
 .hero-inner{
   max-width:1100px;margin:0 auto;padding:0 28px;
   display:grid;grid-template-columns:1fr 340px;
-  gap:60px;align-items:center;
+  gap:48px;align-items:center;
 }
 .pill{
   display:inline-flex;align-items:center;gap:8px;
   padding:8px 16px;border-radius:999px;
-  border:1px solid rgba(91,140,255,.25);
-  background:rgba(91,140,255,.08);
+  border:1px solid rgba(16,185,129,.25);
+  background:rgba(16,185,129,.08);
   font-size:.82rem;font-weight:600;
   color:var(--accent);
   margin-bottom:24px;
@@ -217,7 +209,7 @@ button{font-family:inherit;cursor:pointer}
 }
 .btn-primary:hover{
   transform:translateY(-2px);
-  box-shadow:0 12px 32px rgba(91,140,255,.35);
+  box-shadow:0 12px 32px rgba(16,185,129,.35);
 }
 .btn-secondary{
   display:inline-flex;align-items:center;gap:10px;
@@ -235,86 +227,74 @@ button{font-family:inherit;cursor:pointer}
   transform:translateY(-2px);
 }
 
-/* ========== AVATAR COLUMN ========== */
-.avatar-column{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  transition:opacity .5s ease, transform .5s ease;
-}
-.avatar-wrap{
-  position:relative;
-  width: 240px;height:240px;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
+/* ========== HERO TERMINAL ========== */
+.hero-terminal{
+  background:rgba(0,0,0,.45);
+  border:1px solid rgba(16,185,129,.2);
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 20px 50px rgba(0,0,0,.3), 0 0 40px rgba(16,185,129,.06);
+  backdrop-filter:blur(10px);
   animation:floaty 10s ease-in-out infinite;
 }
-.avatar-blob{
-  position:absolute;
-  inset:-14px;
-  border-radius:50%;
-  background:
-    radial-gradient(closest-side, rgba(91,140,255,.18), transparent 70%),
-    radial-gradient(closest-side, rgba(139,92,246,.14), transparent 70%);
-  filter:blur(0px);
-  opacity:.9;
-  animation:morph 10s ease-in-out infinite;
+:root[data-theme="light"] .hero-terminal{
+  background:rgba(17,24,39,.92);
+  border-color:rgba(16,185,129,.25);
 }
-.avatar-ring{
-  position:absolute;
-  inset:-8px;
-  border-radius:50%;
-  border:1px solid rgba(91,140,255,.35);
-  box-shadow:0 0 0 1px rgba(139,92,246,.12), 0 0 34px rgba(91,140,255,.18);
-  animation:spin-slow 80s linear infinite;
+.terminal-bar{
+  display:flex;align-items:center;gap:7px;
+  padding:10px 14px;
+  background:rgba(255,255,255,.04);
+  border-bottom:1px solid rgba(255,255,255,.06);
 }
-.avatar-ring::before{
-  content:"";
-  position:absolute;
-  width:6px;height:6px;
-  border-radius:50%;
+.terminal-dot{
+  width:9px;height:9px;border-radius:50%;
+}
+.terminal-dot.r{background:#ff5f57}
+.terminal-dot.y{background:#febc2e}
+.terminal-dot.g{background:#28c840}
+.terminal-title{
+  flex:1;text-align:center;
+  font-size:.72rem;font-weight:600;
+  color:rgba(255,255,255,.35);
+  font-family:'DM Sans',monospace;
+}
+.terminal-body{
+  padding:14px 16px;
+  font-family:'DM Sans',monospace;
+  font-size:.78rem;
+  line-height:1.8;
+  color:rgba(255,255,255,.7);
+}
+.terminal-body .t-prompt{color:#10b981;font-weight:700}
+.terminal-body .t-keyword{color:#06b6d4}
+.terminal-body .t-string{color:#fbbf24}
+.terminal-body .t-comment{color:rgba(255,255,255,.3);font-style:italic}
+.terminal-body .t-method{color:#a78bfa}
+.terminal-body .t-number{color:#f472b6}
+.terminal-line{
+  opacity:0;
+  animation:typeLine .4s ease forwards;
+}
+.terminal-line:nth-child(1){animation-delay:.3s}
+.terminal-line:nth-child(2){animation-delay:.7s}
+.terminal-line:nth-child(3){animation-delay:1.1s}
+.terminal-line:nth-child(4){animation-delay:1.5s}
+.terminal-line:nth-child(5){animation-delay:1.9s}
+.terminal-line:nth-child(6){animation-delay:2.3s}
+.terminal-line:nth-child(7){animation-delay:2.7s}
+.terminal-line:nth-child(8){animation-delay:3.1s}
+.terminal-cursor{
+  display:inline-block;
+  width:8px;height:15px;
   background:var(--accent);
-  top: 18px; right:30px;
-  opacity:0.7;
-  box-shadow:0 0 12px rgba(91,140,255,.4);
+  margin-left:4px;
+  vertical-align:text-bottom;
+  animation:blink 1s step-end infinite;
 }
-.avatar-ring.r2{
-  inset:-20px;
-  border-color:rgba(139,92,246,.25);
-  box-shadow:0 0 0 1px rgba(91,140,255,.10), 0 0 34px rgba(139,92,246,.16);
-  animation-duration:120s;
-  animation-direction:reverse;
-  opacity:.85;
-}
-.avatar-ring.r2::before{
-  width:5px;height:5px;
-  background:var(--accent-2);
-  top:auto; bottom: 14px; left:36px; right:auto;
-  opacity:0.6;
-  box-shadow:0 0 10px rgba(139,92,246,.35);
-}
-.avatar-img-wrap{
-  width:100%;height:100%;
-  border-radius:50%;
-  overflow:hidden;
-  border:1px solid rgba(91,140,255,.15);
-  box-shadow:
-    0 0 0 1px rgba(0,0,0,.2),
-    0 18px 45px rgba(0,0,0,.45),
-    inset 0 0 20px rgba(0,0,0,.15);
-}
-.avatar-img{
-  width:100%;height:100%;
-  object-fit:cover;
-}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+@keyframes typeLine{to{opacity:1}}
 
-/* Animations */
-@keyframes spin-slow{ to { transform:rotate(360deg); } }
-@keyframes morph{
-  0%,100%{border-radius:55% 45% 50% 50% / 50% 52% 48% 50%}
-  50%{border-radius:45% 55% 42% 58% / 55% 45% 55% 45%}
-}
 @keyframes floaty{
   0%,100%{transform:translateY(0)}
   50%{transform:translateY(-10px)}
@@ -343,7 +323,7 @@ button{font-family:inherit;cursor:pointer}
   margin-bottom:48px;
 }
 
-/* ========== ABOUT (compact, only metrics) ========== */
+/* ========== ABOUT ========== */
 .about-title{margin-bottom:22px}
 .about-desc{
   max-width:820px;
@@ -400,10 +380,7 @@ button{font-family:inherit;cursor:pointer}
   opacity:0;
   transition:opacity .3s ease;
 }
-.bio-overlay.show{
-  display:flex;
-  opacity:1;
-}
+.bio-overlay.show{display:flex;opacity:1}
 .bio-card{
   background:var(--bg);
   border:1px solid var(--border);
@@ -414,8 +391,8 @@ button{font-family:inherit;cursor:pointer}
   position:relative;
   box-shadow:0 20px 60px rgba(0,0,0,.5);
 }
-:root[data-theme="dark"] .bio-card{ background:#0e1117; }
-:root[data-theme="light"] .bio-card{ background:#f6f7fb; }
+:root[data-theme="dark"] .bio-card{background:#0e1117}
+:root[data-theme="light"] .bio-card{background:#f6f7fb}
 .bio-close{
   position:absolute;top:20px;right:20px;
   width:36px;height:36px;
@@ -436,6 +413,7 @@ button{font-family:inherit;cursor:pointer}
   width:90px;height:90px;
   border-radius:50%;
   object-fit:cover;
+  object-position:center;
   border:3px solid var(--accent);
 }
 .bio-title{
@@ -505,7 +483,136 @@ button{font-family:inherit;cursor:pointer}
   to{opacity:1;transform:translateY(0)}
 }
 
+/* ========== EXPERIENCE / EDUCATION ========== */
+.timeline-section{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+  margin-top:12px;
+}
+.timeline-card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:28px;
+  transition:transform .2s, border-color .2s;
+  cursor:pointer;
+  position:relative;
+}
+.timeline-card:hover{
+  transform:translateY(-4px);
+  border-color:var(--accent);
+}
+.timeline-card.expanded{
+  border-color:var(--accent);
+  background:rgba(16,185,129,.05);
+}
+.timeline-card h3{
+  font-family:var(--font-head);
+  font-size:1.2rem;font-weight:700;
+  margin-bottom:18px;
+  color:var(--text);
+}
+.timeline-entry{
+  display:flex;gap:14px;
+  padding:14px 0;
+  border-bottom:1px solid var(--border);
+}
+.timeline-entry:last-child{border-bottom:none}
+.timeline-dot{
+  width:10px;height:10px;
+  border-radius:50%;
+  background:var(--accent);
+  margin-top:6px;
+  flex-shrink:0;
+}
+.timeline-role{font-weight:700;font-size:.95rem;color:var(--text)}
+.timeline-org{font-size:.88rem;color:var(--accent);font-weight:600}
+.timeline-org-row{
+  display:flex;align-items:center;gap:8px;
+  margin-top:2px;
+}
+.timeline-logo{
+  width:22px;height:22px;
+  border-radius:4px;
+  object-fit:contain;
+  flex-shrink:0;
+}
+.timeline-date{font-size:.82rem;color:var(--text-muted);margin-top:2px}
+.timeline-desc{font-size:.88rem;color:var(--text-muted);margin-top:6px;line-height:1.6}
+.timeline-extra{
+  font-size:.88rem;
+  color:var(--text-muted);
+  margin-top:8px;
+  padding-top:8px;
+  border-top:1px solid var(--border);
+  line-height:1.6;
+  max-height:0;
+  overflow:hidden;
+  opacity:0;
+  transition:max-height .3s ease, opacity .3s ease, margin-top .3s ease, padding-top .3s ease;
+}
+.timeline-card.expanded .timeline-extra{
+  max-height:500px;
+  opacity:1;
+  margin-top:12px;
+  padding-top:12px;
+}
+:root[data-theme="light"] .timeline-card.expanded{
+  background:rgba(5,150,105,.08);
+}
+
+/* ========== CERTIFICATIONS ========== */
+.certs-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:18px;
+}
+.cert-card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:22px;
+  display:flex;align-items:center;gap:16px;
+  transition:transform .2s, border-color .2s;
+}
+.cert-card:hover{
+  transform:translateY(-3px);
+  border-color:var(--accent);
+}
+.cert-icon{
+  width:46px;height:46px;
+  border-radius:12px;
+  background:rgba(16,185,129,.1);
+  border:1px solid rgba(16,185,129,.25);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.3rem;
+  flex-shrink:0;
+}
+.cert-info{flex:1}
+.cert-name{font-weight:700;font-size:.92rem;color:var(--text)}
+.cert-issuer{font-size:.82rem;color:var(--accent);font-weight:600;margin-top:2px}
+.cert-date{font-size:.78rem;color:var(--text-muted);margin-top:2px}
+
 /* ========== PROJECTS ========== */
+.projects-empty{
+  text-align:center;
+  padding:60px 28px;
+  background:var(--surface);
+  border:2px dashed var(--border);
+  border-radius:var(--radius);
+}
+.projects-empty .empty-icon{
+  font-size:3rem;
+  margin-bottom:16px;
+}
+.projects-empty p{
+  color:var(--text-muted);
+  font-size:1.05rem;
+  line-height:1.7;
+  max-width:400px;
+  margin:0 auto;
+}
 .projects-grid{display:grid;gap:28px}
 .project-card{
   position:relative;
@@ -518,7 +625,7 @@ button{font-family:inherit;cursor:pointer}
 .project-card:hover{
   transform:translateY(-6px);
   border-color:var(--accent);
-  box-shadow:0 16px 40px rgba(91,140,255,.15);
+  box-shadow:0 16px 40px rgba(16,185,129,.15);
 }
 .project-status{
   display:inline-flex;align-items:center;gap:6px;
@@ -529,6 +636,7 @@ button{font-family:inherit;cursor:pointer}
   margin-bottom:14px;
 }
 .status-live{background:rgba(34,197,94,.12);color:#22c55e;border:1px solid rgba(34,197,94,.3)}
+.status-soon{background:rgba(234,179,8,.12);color:#eab308;border:1px solid rgba(234,179,8,.3)}
 .status-dot{
   width:6px;height:6px;border-radius:50%;
   background:currentColor;
@@ -554,8 +662,8 @@ button{font-family:inherit;cursor:pointer}
 .project-tag{
   padding:6px 12px;
   border-radius:6px;
-  background:rgba(91,140,255,.1);
-  border:1px solid rgba(91,140,255,.25);
+  background:rgba(16,185,129,.1);
+  border:1px solid rgba(16,185,129,.25);
   color:var(--accent);
   font-size:.78rem;font-weight:600;
 }
@@ -568,45 +676,7 @@ button{font-family:inherit;cursor:pointer}
   font-size:.88rem;font-weight:700;
   transition:transform .2s, box-shadow .2s;
 }
-.btn-case:hover{transform:translateX(4px);box-shadow:0 8px 20px rgba(91,140,255,.25)}
-
-/* ========== PROJECT CARD HOVER HINT ========== */
-.project-card{cursor:pointer}
-.project-card a, .project-card button{cursor:pointer}
-.project-card::after{
-  content:"Cliquez pour un aperçu";
-  position:absolute;
-  right:24px;
-  bottom:22px;
-  font-size:.78rem;
-  font-weight:700;
-  letter-spacing:.01em;
-  color:rgba(240,242,247,.45);
-  opacity:0;
-  transform:translateY(6px);
-  transition:opacity .18s ease, transform .18s ease;
-  padding:6px 10px;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,.08);
-  background:rgba(14,17,23,.32);
-  backdrop-filter:blur(10px);
-  -webkit-backdrop-filter:blur(10px);
-  pointer-events:none;
-}
-.project-card:hover::after,
-.project-card:focus-within::after{
-  opacity:1;
-  transform:translateY(0);
-}
-:root[data-theme="light"] .project-card::after{
-  color:rgba(14,19,32,.55);
-  border-color:rgba(14,19,32,.12);
-  background:rgba(255,255,255,.55);
-}
-html[data-lang="en"] .project-card::after{
-  content:"Click for a preview";
-}
-
+.btn-case:hover{transform:translateX(4px);box-shadow:0 8px 20px rgba(16,185,129,.25)}
 
 /* ========== CONTACT ========== */
 .contact-wrap{
@@ -660,15 +730,11 @@ html[data-lang="en"] .project-card::after{
 }
 .email-pop.show{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
 .email-pop-row{
-  display:flex;
-  align-items:center;
-  gap:10px;
+  display:flex;align-items:center;gap:10px;
 }
 .email-addr{
-  flex:1;
-  font-size:.92rem;
-  color:var(--text);
-  font-weight:600;
+  flex:1;font-size:.92rem;
+  color:var(--text);font-weight:600;
 }
 .copy-btn{
   width:36px;height:36px;
@@ -713,8 +779,7 @@ html[data-lang="en"] .project-card::after{
   border-color:var(--accent);
 }
 .theme-toggle span, .lang-toggle span{
-  font-size:1.25rem;
-  line-height:1;
+  font-size:1.25rem;line-height:1;
 }
 
 /* ========== REVEAL ANIMATION ========== */
@@ -729,114 +794,19 @@ html[data-lang="en"] .project-card::after{
 .reveal-d3{transition-delay:.3s}
 .reveal-d4{transition-delay:.4s}
 
-
-/* ========== PROJECT PREVIEW OVERLAY ========== */
-.project-preview-overlay{
-  position:fixed;inset:0;z-index:210;
-  background:rgba(14,17,23,.86);
-  backdrop-filter:blur(12px);
-  -webkit-backdrop-filter:blur(12px);
-  display:none;
-  align-items:center;
-  justify-content:center;
-  padding:24px;
-  opacity:0;
-  transition:opacity .28s ease;
-}
-.project-preview-overlay.show{display:flex;opacity:1}
-.project-preview-card{
-  background:var(--bg);
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  width:min(1100px, 100%);
-  height:min(82vh, 760px);
-  display:flex;
-  flex-direction:column;
-  overflow:hidden;
-  box-shadow:0 20px 60px rgba(0,0,0,.55);
-}
-:root[data-theme="dark"] .project-preview-card{ background:#0e1117; }
-:root[data-theme="light"] .project-preview-card{ background:#f6f7fb; }
-
-.project-preview-header{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
-  padding:18px 18px 14px;
-  border-bottom:1px solid var(--border);
-}
-.project-preview-title{
-  font-family:var(--font-head);
-  font-weight:800;
-  font-size:1.25rem;
-  line-height:1.2;
-}
-.project-preview-close{
-  width:38px;height:38px;
-  border-radius:50%;
-  border:1px solid var(--border);
-  background:var(--surface);
-  display:flex;align-items:center;justify-content:center;
-  font-size:1.35rem;
-  color:var(--text-muted);
-  transition:background .2s, color .2s, transform .15s;
-}
-.project-preview-close:hover{background:var(--surface-hover);color:var(--text);transform:translateY(-1px)}
-
-.project-preview-frame{
-  position:relative;
-  flex:1;
-  padding:14px 18px;
-}
-.project-preview-iframe{
-  width:100%;
-  height:100%;
-  border:0;
-  border-radius:16px;
-  background:rgba(0,0,0,.15);
-}
-.project-preview-loading{
-  position:absolute;
-  inset:14px 18px;
-  border-radius:16px;
-  background:rgba(14,17,23,.55);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:var(--text-muted);
-  font-weight:700;
-  opacity:0;
-  pointer-events:none;
-  transition:opacity .2s ease;
-}
-.project-preview-loading.show{opacity:1;pointer-events:auto}
-
-.project-preview-footer{
-  padding:14px 18px 18px;
-  border-top:1px solid var(--border);
-  display:flex;
-  justify-content:flex-end;
-}
-@media(max-width:600px){
-  .project-preview-card{height:90vh}
-  .project-preview-title{font-size:1.05rem}
-}
-
 /* ========== RESPONSIVE ========== */
 @media(max-width:900px){
-  .hero-inner{grid-template-columns:1fr;gap:40px}
-  .avatar-column{order:-1}
-  .avatar-wrap{width:240px;height:240px}
+  .hero-inner{grid-template-columns:1fr;gap:32px}
+  .hero-terminal{order:-1}
   .metrics-strip{grid-template-columns:1fr}
   .skills-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
+  .timeline-section{grid-template-columns:1fr}
 }
 @media(max-width:600px){
   .nav-links{display:none}
   .metrics-strip{grid-template-columns:1fr}
 }
 </style>
-<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "71c6bc77fe664e55a7bbfb514c5f2fc4"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
 <body>
 <div class="bg-mesh"></div>
@@ -846,24 +816,22 @@ html[data-lang="en"] .project-card::after{
 <nav class="nav" id="mainNav">
   <div class="nav-inner">
     <a href="#" class="logo">
-      <span class="logo-ring">RM</span>
-      Rafael Midolli
+      <span class="logo-ring">GM</span>
+      Guilherme Midolli
     </a>
     <div style="display:flex;align-items:center;gap:12px">
       <div class="nav-links">
-        <a href="#about" class="nav-link"><span class="lang-fr">À propos</span><span class="lang-en">About</span></a>
-        <a href="#skills" class="nav-link"><span class="lang-fr">Compétences</span><span class="lang-en">Skills</span></a>
-        <a href="#projects" class="nav-link"><span class="lang-fr">Projets</span><span class="lang-en">Projects</span></a>
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#about" class="nav-link"><span class="lang-pt">Sobre</span><span class="lang-en">About</span></a>
+        <a href="#skills" class="nav-link"><span class="lang-pt">Habilidades</span><span class="lang-en">Skills</span></a>
+        <a href="#experience" class="nav-link"><span class="lang-pt">Trajetória</span><span class="lang-en">Journey</span></a>
+        <a href="#projects" class="nav-link"><span class="lang-pt">Projetos</span><span class="lang-en">Projects</span></a>
+        <a href="#contact" class="nav-link"><span class="lang-pt">Contato</span><span class="lang-en">Contact</span></a>
       </div>
-      <a href="assets/docs/CV_Rafael_Midolli_2026.pdf" class="btn-cv" target="_blank" rel="noopener">
-        <span class="lang-fr">📄 CV</span><span class="lang-en">📄 Resume</span>
-      </a>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" type="button">
         <span id="themeIcon">🌙</span>
       </button>
       <button class="lang-toggle" id="langToggle" aria-label="Toggle language" type="button">
-        <span id="langIcon">FR</span>
+        <span id="langIcon">PT</span>
       </button>
     </div>
   </div>
@@ -874,313 +842,332 @@ html[data-lang="en"] .project-card::after{
     <div>
       <div class="pill">
         <span class="pill-dot"></span>
-        <span class="lang-fr">Retail & FMCG · KPI · Dashboards · Disponible</span>
-        <span class="lang-en">Retail & FMCG · KPI · Dashboards · Available</span>
+        <span class="lang-pt">UFABC · Ciência de Dados · Python · Aberto a oportunidades</span>
+        <span class="lang-en">UFABC · Data Science · Python · Open to opportunities</span>
       </div>
       <h1>
-        <span class="lang-fr">Bonjour, je suis Rafael — <em>Business Analyst</em><br/>orienté data</span>
-        <span class="lang-en">Hello, I'm Rafael — <em>Business Analyst</em><br/>data-driven</span>
+        <span class="lang-pt">Olá, eu sou Guilherme — <em>Aspirante a Cientista de Dados</em></span>
+        <span class="lang-en">Hi, I'm Guilherme — an <em>Aspiring Data Scientist</em></span>
       </h1>
       <p class="hero-desc">
-        <span class="lang-fr">Avec 4 ans d'expérience en Retail & FMCG, je transforme les données en KPI, dashboards et recommandations actionnables pour piloter la performance (ventes, supply chain, opérations).</span>
-        <span class="lang-en">With 4 years of experience in Retail & FMCG, I turn data into KPIs, dashboards, and actionable recommendations to drive performance (sales, supply chain, operations).</span>
+        <span class="lang-pt">Estudante de Bacharelado em Ciência e Tecnologia na UFABC, com foco em Ciência de Dados. Apaixonado por transformar dados em insights usando Python, matemática e raciocínio lógico. Trainee na UFABC Jr.</span>
+        <span class="lang-en">Bachelor of Science and Technology student at UFABC, focusing on Data Science. Passionate about turning data into insights using Python, math, and logical reasoning. Trainee at UFABC Jr.</span>
       </p>
       <div class="hero-ctas">
-        <a href="#projects" class="btn-primary">
-          <span class="lang-fr">Voir mes projets</span><span class="lang-en">View my projects</span>
+        <a href="#contact" class="btn-primary">
+          <span class="lang-pt">Entre em contato</span><span class="lang-en">Get in touch</span>
           <span>↓</span>
         </a>
         <button class="btn-secondary" id="bioToggleBtn" type="button">
-          <span class="lang-fr">📖 Biographie</span><span class="lang-en">📖 Biography</span>
+          <span class="lang-pt">📖 Sobre mim</span><span class="lang-en">📖 About me</span>
         </button>
       </div>
     </div>
-    <div class="avatar-column">
-      <div class="avatar-wrap" aria-label="Portrait Rafael Midolli">
-        <div class="avatar-blob"></div>
-        <div class="avatar-ring"></div>
-        <div class="avatar-ring r2"></div>
-        <div class="avatar-img-wrap">
-          <img src="assets/img/photo_bio.jpg" alt="Rafael Midolli" class="avatar-img"/>
+    <div class="hero-terminal">
+      <div class="terminal-bar">
+        <span class="terminal-dot r"></span>
+        <span class="terminal-dot y"></span>
+        <span class="terminal-dot g"></span>
+        <span class="terminal-title">guilherme.py</span>
+      </div>
+      <div class="terminal-body">
+        <div class="lang-pt">
+          <div class="terminal-line"><span class="t-comment"># quem sou eu?</span></div>
+          <div class="terminal-line"><span class="t-keyword">import</span> pandas <span class="t-keyword">as</span> pd</div>
+          <div class="terminal-line">&nbsp;</div>
+          <div class="terminal-line">guilherme = {</div>
+          <div class="terminal-line">&nbsp;&nbsp;<span class="t-string">"universidade"</span>: <span class="t-string">"UFABC"</span>,</div>
+          <div class="terminal-line">&nbsp;&nbsp;<span class="t-string">"foco"</span>: <span class="t-string">"Ciência de Dados"</span>,</div>
+          <div class="terminal-line">&nbsp;&nbsp;<span class="t-string">"stack"</span>: [<span class="t-string">"Python"</span>, <span class="t-string">"Pandas"</span>, <span class="t-string">"SQL"</span>],</div>
+          <div class="terminal-line">&nbsp;&nbsp;<span class="t-string">"status"</span>: <span class="t-string">"Aberto a oportunidades"</span> <span class="t-comment"># 🚀</span></div>
+          <div class="terminal-line">}<span class="terminal-cursor"></span></div>
+        </div>
+        <div class="lang-en">
+          <div class="terminal-line"><span class="t-comment"># who am I?</span></div>
+          <div class="terminal-line"><span class="t-keyword">import</span> pandas <span class="t-keyword">as</span> pd</div>
+          <div class="terminal-line">&nbsp;</div>
+          <div class="terminal-line">guilherme = {</div>
+          <div class="terminal-line">&nbsp;&nbsp;<span class="t-string">"university"</span>: <span class="t-string">"UFABC"</span>,</div>
+          <div class="terminal-line">&nbsp;&nbsp;<span class="t-string">"focus"</span>: <span class="t-string">"Data Science"</span>,</div>
+          <div class="terminal-line">&nbsp;&nbsp;<span class="t-string">"stack"</span>: [<span class="t-string">"Python"</span>, <span class="t-string">"Pandas"</span>, <span class="t-string">"SQL"</span>],</div>
+          <div class="terminal-line">&nbsp;&nbsp;<span class="t-string">"status"</span>: <span class="t-string">"Open to opportunities"</span> <span class="t-comment"># 🚀</span></div>
+          <div class="terminal-line">}<span class="terminal-cursor"></span></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Bio Overlay -->
 <div class="bio-overlay" id="bioOverlay">
-  <div class="bio-card" role="dialog" aria-modal="true" aria-label="Biographie">
-    <button class="bio-close" id="bioCloseBtn" type="button" aria-label="Close">×</button>
+  <div class="bio-card" role="dialog" aria-modal="true" aria-label="Sobre mim">
+    <button class="bio-close" id="bioCloseBtn" type="button" aria-label="Fechar">×</button>
     <div class="bio-header">
-      <img src="assets/img/photo_bio.jpg" alt="Rafael Midolli" class="bio-avatar"/>
+      <img src="assets/img/photo_bio.png" alt="Guilherme Midolli" class="bio-avatar"/>
       <div>
-        <div class="bio-title">Rafael Midolli</div>
+        <div class="bio-title">Guilherme Midolli</div>
         <div class="bio-subtitle">
-          <span class="lang-fr">Business Analyst · orienté data</span>
-          <span class="lang-en">Business Analyst · data-driven</span>
+          <span class="lang-pt">Aspirante a Cientista de Dados · UFABC</span>
+          <span class="lang-en">Aspiring Data Scientist · UFABC</span>
         </div>
       </div>
     </div>
     <div class="bio-body">
-      <p class="lang-fr">
-        Après un parcours d'ingénieur et un MBA en Intelligence Artificielle, j'ai travaillé 4 ans dans le secteur Retail & FMCG, d'abord chez Colgate-Palmolive en tant qu'Analyste Commercial, puis chez Kantar en tant que Consultant BI.
+      <p class="lang-pt">
+        Atualmente sou estudante de Bacharelado em Ciência e Tecnologia na UFABC, com foco no desenvolvimento de competências em matemática, física e computação. Tenho um interesse genuíno pela área de Ciência de Dados, onde busco aplicar raciocínio lógico e ferramentas de programação para resolver problemas complexos.
       </p>
-      <p class="lang-fr">
-        Mon expertise se situe à l'intersection de la data et du métier : je conçois des tableaux de bord Power BI orientés KPI (sell-out, category management, supply chain), j'automatise des pipelines ETL en Python, et je traduis les insights en recommandations concrètes pour les équipes commerciales et marketing.
+      <p class="lang-pt">
+        Como Trainee na UFABC Jr, estou desenvolvendo competências em trabalho em equipe, resolução de problemas e visão de negócios através de treinamentos e projetos práticos. Essa experiência tem sido fundamental para meu crescimento profissional e pessoal.
       </p>
-      <p class="lang-fr">
-        Basé en France, je suis disponible pour des postes de Business Analyst (orienté data) ou Data Analyst, notamment en Retail/FMCG, ou toute industrie nécessitant une approche data-driven rigoureuse.
-      </p>
-
-      <p class="lang-en">
-        After an engineering degree and an MBA in Artificial Intelligence, I worked 4 years in Retail & FMCG, first at Colgate-Palmolive as a Commercial Analyst, then at Kantar as a BI Consultant.
+      <p class="lang-pt">
+        Meu objetivo é me tornar um Cientista de Dados, combinando minha base sólida em matemática e programação com habilidades práticas em análise de dados, machine learning e visualização. Estou sempre em busca de novos desafios e oportunidades de aprendizado.
       </p>
       <p class="lang-en">
-        My expertise sits at the intersection of data and business: I build KPI-driven Power BI dashboards (sell-out, category management, supply chain), automate ETL pipelines in Python, and turn insights into concrete recommendations for commercial and marketing teams.
+        I'm currently a Bachelor of Science and Technology student at UFABC, focused on developing skills in mathematics, physics and computing. I have a genuine interest in Data Science, where I seek to apply logical reasoning and programming tools to solve complex problems.
       </p>
       <p class="lang-en">
-        Based in France, I am available for Business Analyst (data-driven) or Data Analyst roles, in Retail/FMCG or any industry that needs a rigorous data-driven approach.
+        As a Trainee at UFABC Jr, I'm building competencies in teamwork, problem-solving and business acumen through training and hands-on projects. This experience has been essential for my professional and personal growth.
+      </p>
+      <p class="lang-en">
+        My goal is to become a Data Scientist, combining my solid foundation in math and programming with practical skills in data analysis, machine learning and visualization. I'm always looking for new challenges and learning opportunities.
       </p>
     </div>
   </div>
 </div>
 
-
-<div class="project-preview-overlay" id="projectPreviewOverlay" aria-hidden="true">
-  <div class="project-preview-card" role="dialog" aria-modal="true" aria-label="Project preview">
-    <div class="project-preview-header">
-      <div class="project-preview-title" id="projectPreviewTitle">
-        <span class="lang-fr">Aperçu du projet</span><span class="lang-en">Project preview</span>
-      </div>
-      <button class="project-preview-close" id="projectPreviewCloseBtn" type="button" aria-label="Close">×</button>
-    </div>
-    <div class="project-preview-frame">
-      <iframe id="projectPreviewIframe" class="project-preview-iframe" loading="lazy"></iframe>
-      <div class="project-preview-loading" id="projectPreviewLoading">
-        <span class="lang-fr">Chargement…</span><span class="lang-en">Loading…</span>
-      </div>
-    </div>
-    <div class="project-preview-footer">
-      <a href="#" class="btn-case" id="projectPreviewOpenBtn" target="_blank" rel="noopener">
-        <span class="lang-fr">Ouvrir le cas</span><span class="lang-en">Open case</span>
-        <span>→</span>
-      </a>
-    </div>
-  </div>
-</div>
-
+<!-- About -->
 <section class="section" id="about">
   <div class="section-inner">
     <div class="section-label reveal">
-      <span class="lang-fr">À propos</span>
-      <span class="lang-en">About</span>
+      <span class="lang-pt">Sobre mim</span>
+      <span class="lang-en">About me</span>
     </div>
     <h2 class="section-title reveal reveal-d1 about-title">
-      <span class="lang-fr">Ce qui me distingue</span>
-      <span class="lang-en">What sets me apart</span>
+      <span class="lang-pt">Construindo minha carreira em dados</span>
+      <span class="lang-en">Building my career in data</span>
     </h2>
 
     <p class="about-desc reveal reveal-d2">
-      <span class="lang-fr">
-        Business Analyst spécialisé en Retail & PGC (FMCG), je construis des analyses qui passent directement à l'action.
-        Mon approche : partir des données, structurer un diagnostic clair, et le rendre exploitable pour les équipes ventes, marketing ou direction.
+      <span class="lang-pt">
+        Estudante de BC&T e Ciência de Dados na UFABC, com paixão por análise de dados e machine learning. 
+        Minha abordagem: aprender fazendo — aplicando matemática, estatística e programação em projetos reais 
+        para desenvolver soluções baseadas em dados.
       </span>
       <span class="lang-en">
-        Business Analyst specialized in Retail & FMCG, I deliver analyses that translate directly into action.
-        My approach: start from data, structure a clear diagnosis, and make it usable for sales, marketing, and leadership teams.
+        Science and Technology & Data Science student at UFABC, passionate about data analysis and machine learning. 
+        My approach: learn by doing — applying math, statistics and programming to real projects 
+        to develop data-driven solutions.
       </span>
     </p>
 
     <div class="metrics-strip reveal reveal-d3">
       <div class="metric-card">
-        <div class="metric-value"><span class="lang-fr">4 ans</span><span class="lang-en">4 years</span></div>
+        <div class="metric-value">UFABC</div>
         <div class="metric-label">
-          <span class="lang-fr">Expérience en Retail & FMCG</span>
-          <span class="lang-en">Retail & FMCG experience</span>
+          <span class="lang-pt">Universidade Federal<br/>do ABC</span>
+          <span class="lang-en">Federal University<br/>of ABC</span>
         </div>
       </div>
 
       <div class="metric-card">
         <div class="metric-value text-fit">
-          <span class="lang-fr">Expertise auprès de<br>leaders mondiaux</span>
-          <span class="lang-en">Expertise with<br>global leaders</span>
+          <span class="lang-pt">BC&T +<br/>Ciência de Dados</span>
+          <span class="lang-en">S&T +<br/>Data Science</span>
         </div>
         <div class="metric-label">
-          (Colgate · Lactalis · Tetra Pak · Kantar)
+          <span class="lang-pt">Formação acadêmica</span>
+          <span class="lang-en">Academic background</span>
         </div>
       </div>
 
       <div class="metric-card">
-        <div class="metric-value">MBA</div>
+        <div class="metric-value text-fit">
+          <span class="lang-pt">Trainee<br/>UFABC Jr</span>
+          <span class="lang-en">Trainee<br/>UFABC Jr</span>
+        </div>
         <div class="metric-label">
-          <span class="lang-fr">Intelligence Artificielle +<br>Diplôme d'Ingénieur</span>
-          <span class="lang-en">Artificial Intelligence +<br>Engineering Degree</span>
+          <span class="lang-pt">Consultoria Júnior</span>
+          <span class="lang-en">Junior Consulting</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Skills -->
 <section class="section" id="skills">
   <div class="section-inner">
     <div class="section-label reveal">
-      <span class="lang-fr">Compétences</span>
+      <span class="lang-pt">Habilidades</span>
       <span class="lang-en">Skills</span>
     </div>
     <h2 class="section-title reveal reveal-d1">
-      <span class="lang-fr">Stack technique & expertise métier</span>
-      <span class="lang-en">Tech stack & business expertise</span>
+      <span class="lang-pt">Tecnologias & conhecimentos</span>
+      <span class="lang-en">Technologies & knowledge</span>
     </h2>
 
     <div class="skills-tabs reveal reveal-d2" id="skillsTabs">
-      <button class="skill-tab active" data-tab="bi" type="button">
-        <span>📊</span>
-        <span class="lang-fr">BI & Viz</span>
-        <span class="lang-en">BI & Viz</span>
+      <button class="skill-tab active" data-tab="tech" type="button">
+        <span>💻</span>
+        <span class="lang-pt">Tecnologias</span>
+        <span class="lang-en">Technologies</span>
       </button>
-      <button class="skill-tab" data-tab="engineering" type="button">
-        <span>🧱</span>
-        <span class="lang-fr">Data Engineering</span>
-        <span class="lang-en">Data Engineering</span>
-      </button>
-      <button class="skill-tab" data-tab="business" type="button">
-        <span>📈</span>
-        <span class="lang-fr">Métier</span>
-        <span class="lang-en">Business</span>
-      </button>
-      <button class="skill-tab" data-tab="tools" type="button">
-        <span>🛠️</span>
-        <span class="lang-fr">Outils</span>
-        <span class="lang-en">Tools</span>
+      <button class="skill-tab" data-tab="foundations" type="button">
+        <span>📚</span>
+        <span class="lang-pt">Fundamentos</span>
+        <span class="lang-en">Foundations</span>
       </button>
     </div>
 
     <div class="skills-grid">
-      <!-- BI & Viz -->
-      <div class="skill-chip" data-scope="bi"><span>📊</span> Power BI</div>
-      <div class="skill-chip" data-scope="bi"><span>➗</span> DAX</div>
-      <div class="skill-chip" data-scope="bi"><span>📝</span> Power Query (M)</div>
-      <div class="skill-chip" data-scope="bi"><span>📈</span> Plotly</div>
-      <div class="skill-chip" data-scope="bi"><span>📊</span> Data Visualization</div>
-      <div class="skill-chip" data-scope="bi"><span>📑</span> KPI Reporting</div>
+      <!-- Tecnologias -->
+      <div class="skill-chip" data-scope="tech"><span>🐍</span> Python</div>
+      <div class="skill-chip" data-scope="tech"><span>🐼</span> Pandas</div>
+      <div class="skill-chip" data-scope="tech"><span>🔢</span> NumPy</div>
+      <div class="skill-chip" data-scope="tech"><span>📊</span> Matplotlib</div>
+      <div class="skill-chip" data-scope="tech"><span>🗃️</span> SQL</div>
+      <div class="skill-chip" data-scope="tech"><span>📓</span> Jupyter</div>
+      <div class="skill-chip" data-scope="tech"><span>🔧</span> Git & GitHub</div>
+      <div class="skill-chip" data-scope="tech"><span>📊</span> Excel</div>
 
-      <!-- Data Engineering -->
-      <div class="skill-chip" data-scope="engineering" hidden><span>🐍</span> Python</div>
-      <div class="skill-chip" data-scope="engineering" hidden><span>🐼</span> Pandas</div>
-      <div class="skill-chip" data-scope="engineering" hidden><span>🗃️</span> SQL</div>
-      <div class="skill-chip" data-scope="engineering" hidden><span>🦆</span> DuckDB</div>
-      <div class="skill-chip" data-scope="engineering" hidden><span>🐘</span> PostgreSQL</div>
-      <div class="skill-chip" data-scope="engineering" hidden><span>🔧</span> dbt</div>
-      <div class="skill-chip" data-scope="engineering" hidden><span>🔄</span> ETL / ELT</div>
-      <div class="skill-chip" data-scope="engineering" hidden><span>⭐</span> Star Schema</div>
-      <div class="skill-chip" data-scope="engineering" hidden><span>🧱</span> Data Modeling</div>
-
-      <!-- Métier -->
-      <div class="skill-chip" data-scope="business" hidden><span>🏪</span> Retail Analytics</div>
-      <div class="skill-chip" data-scope="business" hidden><span>💰</span> Sell-Out</div>
-      <div class="skill-chip" data-scope="business" hidden><span>📦</span> Category Mgmt</div>
-      <div class="skill-chip" data-scope="business" hidden><span>🏷️</span> Pricing & Assortment</div>
-      <div class="skill-chip" data-scope="business" hidden><span>🚚</span> Supply Chain KPIs</div>
-      <div class="skill-chip" data-scope="business" hidden><span>🧩</span> Segmentation</div>
-      <div class="skill-chip" data-scope="business" hidden><span>📊</span> Pareto Analysis</div>
-      <div class="skill-chip" data-scope="business" hidden><span>📉</span> Gap Analysis</div>
-
-      <!-- Outils -->
-      <div class="skill-chip" data-scope="tools" hidden><span>📊</span> Excel</div>
-      <div class="skill-chip" data-scope="tools" hidden><span>🔧</span> Git & GitHub</div>
-      <div class="skill-chip" data-scope="tools" hidden><span>📓</span> Jupyter</div>
-      <div class="skill-chip" data-scope="tools" hidden><span>💻</span> VS Code</div>
-      <div class="skill-chip" data-scope="tools" hidden><span>🐳</span> Docker</div>
-      <div class="skill-chip" data-scope="tools" hidden><span>🎨</span> Streamlit</div>
+      <!-- Fundamentos -->
+      <div class="skill-chip" data-scope="foundations" hidden><span>📊</span> <span class="lang-pt">Estatística</span><span class="lang-en">Statistics</span></div>
+      <div class="skill-chip" data-scope="foundations" hidden><span>🎲</span> <span class="lang-pt">Probabilidade</span><span class="lang-en">Probability</span></div>
+      <div class="skill-chip" data-scope="foundations" hidden><span>📐</span> <span class="lang-pt">Cálculo</span><span class="lang-en">Calculus</span></div>
+      <div class="skill-chip" data-scope="foundations" hidden><span>🔢</span> <span class="lang-pt">Álgebra Linear</span><span class="lang-en">Linear Algebra</span></div>
+      <div class="skill-chip" data-scope="foundations" hidden><span>💡</span> <span class="lang-pt">Raciocínio Lógico</span><span class="lang-en">Logical Reasoning</span></div>
+      <div class="skill-chip" data-scope="foundations" hidden><span>🤖</span> Machine Learning</div>
+      <div class="skill-chip" data-scope="foundations" hidden><span>📈</span> <span class="lang-pt">Análise de Dados</span><span class="lang-en">Data Analysis</span></div>
     </div>
   </div>
 </section>
 
+<!-- Experience & Education -->
+<section class="section" id="experience">
+  <div class="section-inner">
+    <div class="section-label reveal">
+      <span class="lang-pt">Trajetória</span>
+      <span class="lang-en">Journey</span>
+    </div>
+    <h2 class="section-title reveal reveal-d1">
+      <span class="lang-pt">Experiência, formação & certificações</span>
+      <span class="lang-en">Experience, education & certifications</span>
+    </h2>
+
+    <div class="timeline-section reveal reveal-d2">
+      <div class="timeline-card" data-card="trainee">
+        <h3>💼 <span class="lang-pt">Experiência</span><span class="lang-en">Experience</span></h3>
+        <div class="timeline-entry">
+          <div class="timeline-dot"></div>
+          <div>
+            <div class="timeline-role">Trainee</div>
+            <div class="timeline-org-row">
+              <img src="https://ufabcjr.com.br/favicon.ico" alt="UFABC Jr" class="timeline-logo" onerror="this.style.display='none'"/>
+              <span class="timeline-org">UFABC Jr. Consultoria</span>
+            </div>
+            <div class="timeline-date"><span class="lang-pt">Fev 2026 — Presente · São Paulo, Brasil · Híbrido</span><span class="lang-en">Feb 2026 — Present · São Paulo, Brazil · Hybrid</span></div>
+            <div class="timeline-desc">
+              <span class="lang-pt">Atuação como Trainee em consultoria júnior, desenvolvendo competências em trabalho em equipe, resolução de problemas e visão de negócios através de treinamentos e projetos práticos.</span>
+              <span class="lang-en">Working as a Trainee in junior consulting, developing skills in teamwork, problem-solving and business acumen through training and hands-on projects.</span>
+            </div>
+            <div class="timeline-extra">
+              <span class="lang-pt"><strong>Sobre a UFABC Jr:</strong><br/>
+              A UFABC Jr é a empresa júnior da Universidade Federal do ABC, composta por alunos empreendedores que buscam desenvolver soluções inovadoras para empresas e organizações. Oferece consultoria em diversas áreas como tecnologia, dados, gestão e marketing, proporcionando aos membros experiência prática no mercado de trabalho e desenvolvimento de soft skills essenciais.</span>
+              <span class="lang-en"><strong>About UFABC Jr:</strong><br/>
+              UFABC Jr is the junior enterprise of the Federal University of ABC, composed of entrepreneurial students seeking to develop innovative solutions for companies and organizations. Offers consulting in various areas such as technology, data, management and marketing, providing members with practical work experience and essential soft skills development.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-card" data-card="education">
+        <h3>🎓 <span class="lang-pt">Formação Acadêmica</span><span class="lang-en">Education</span></h3>
+        <div class="timeline-entry">
+          <div class="timeline-dot"></div>
+          <div>
+            <div class="timeline-role"><span class="lang-pt">Bacharelado em Ciência e Tecnologia</span><span class="lang-en">Bachelor of Science and Technology</span></div>
+            <div class="timeline-org-row">
+              <img src="assets/img/ufabc-logo.png" alt="UFABC" class="timeline-logo"/>
+              <span class="timeline-org">Universidade Federal do ABC (UFABC)</span>
+            </div>
+            <div class="timeline-date">2025 — <span class="lang-pt">Presente</span><span class="lang-en">Present</span></div>
+            <div class="timeline-desc">
+              <span class="lang-pt">Formação interdisciplinar com foco em matemática, física e computação. Direcionamento para Ciência de Dados — combinando fundamentos quantitativos com programação e análise estatística.</span>
+              <span class="lang-en">Interdisciplinary program focused on mathematics, physics and computing. Specialization path in Data Science — combining quantitative foundations with programming and statistical analysis.</span>
+            </div>
+            <div class="timeline-extra">
+              <span class="lang-pt"><strong>Sobre a UFABC:</strong><br/>
+              A Universidade Federal do ABC é uma instituição pública de excelência localizada no ABC Paulista. Criada em 2006, é reconhecida nacionalmente pela qualidade de ensino e pesquisa. O curso de BC&T é interdisciplinar e fornece base sólida em ciências exatas, permitindo especialização em áreas como Ciência de Dados, Engenharia e Computação.</span>
+              <span class="lang-en"><strong>About UFABC:</strong><br/>
+              The Federal University of ABC is a public institution of excellence located in Greater São Paulo. Founded in 2006, it is nationally recognized for quality teaching and research. The S&T bachelor's program is interdisciplinary and provides a solid foundation in exact sciences, allowing specialization in areas such as Data Science, Engineering and Computing.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certifications -->
+    <div style="margin-top:40px">
+      <h3 class="section-title reveal" style="font-size:1.6rem;margin-bottom:24px">
+        📜 <span class="lang-pt">Certificações</span><span class="lang-en">Certifications</span>
+      </h3>
+      <div class="certs-grid reveal reveal-d1">
+        <div class="cert-card">
+          <div class="cert-icon">🤖</div>
+          <div class="cert-info">
+            <div class="cert-name">Introdução ao Machine Learning</div>
+            <div class="cert-issuer">Hype — Data & AI</div>
+            <div class="cert-date"><span class="lang-pt">Emitida em Jan 2025</span><span class="lang-en">Issued Jan 2025</span></div>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">🧠</div>
+          <div class="cert-info">
+            <div class="cert-name">IA para Todos</div>
+            <div class="cert-issuer">StartSe</div>
+            <div class="cert-date"><span class="lang-pt">Emitida em Jan 2025</span><span class="lang-en">Issued Jan 2025</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
 <section class="section" id="projects">
   <div class="section-inner">
     <div class="section-label reveal">
-      <span class="lang-fr">Projets</span>
+      <span class="lang-pt">Projetos</span>
       <span class="lang-en">Projects</span>
     </div>
     <h2 class="section-title reveal reveal-d1">
-      <span class="lang-fr">Case studies avec dashboards & code</span>
-      <span class="lang-en">Case studies with dashboards & code</span>
+      <span class="lang-pt">Projetos acadêmicos & pessoais</span>
+      <span class="lang-en">Academic & personal projects</span>
     </h2>
 
-    <div class="projects-grid">
-      <article class="project-card reveal reveal-d1">
-        <div class="project-status status-live"><span class="status-dot"></span> <span class="lang-fr">En ligne</span><span class="lang-en">Live</span></div>
-        <h3><span class="lang-fr">Retail Analytics — Pareto & Segmentation</span><span class="lang-en">Retail Analytics — Pareto & Segmentation</span></h3>
-        <p>
-          <span class="lang-fr">Analyse complète sell-out avec segmentation ABC/XYZ, tableaux Pareto, et dashboard interactif Plotly embarqué dans une page HTML.</span>
-          <span class="lang-en">Complete sell-out analysis with ABC/XYZ segmentation, Pareto tables, and interactive Plotly dashboard embedded in an HTML page.</span>
-        </p>
-        <div class="project-tags">
-          <span class="project-tag">Python</span>
-          <span class="project-tag">Pandas</span>
-          <span class="project-tag">Plotly</span>
-          <span class="project-tag">Pareto</span>
-        </div>
-        <a href="project-retail.html" class="btn-case">
-          <span class="lang-fr">Ouvrir le cas</span><span class="lang-en">Open case</span>
-          <span>→</span>
-        </a>
-      </article>
-
-      <article class="project-card reveal reveal-d2">
-        <div class="project-status status-live"><span class="status-dot"></span> <span class="lang-fr">En ligne</span><span class="lang-en">Live</span></div>
-        <h3><span class="lang-fr">ELT Retail — Ventes & Rentabilité</span><span class="lang-en">ELT Retail — Sales & Profitability</span></h3>
-        <p>
-          <span class="lang-fr">Pipeline ELT complet : ingestion Python, transformations dbt (Star Schema), analyse de rentabilité par produit et client, dashboard Power BI.</span>
-          <span class="lang-en">Complete ELT pipeline: Python ingestion, dbt transformations (Star Schema), profitability analysis by product and customer, Power BI dashboard.</span>
-        </p>
-        <div class="project-tags">
-          <span class="project-tag">ELT</span>
-          <span class="project-tag">Python</span>
-          <span class="project-tag">dbt</span>
-          <span class="project-tag">Postgres</span>
-          <span class="project-tag">Power BI</span>
-        </div>
-        <a href="project-elt-retail.html" class="btn-case">
-          <span class="lang-fr">Ouvrir le cas</span><span class="lang-en">Open case</span>
-          <span>→</span>
-        </a>
-      </article>
-
-      <article class="project-card reveal reveal-d3">
-        <div class="project-status status-live"><span class="status-dot"></span> <span class="lang-fr">En ligne</span><span class="lang-en">Live</span></div>
-        <h3><span class="lang-fr">Supply Chain — Performance Livraison</span><span class="lang-en">Supply Chain — Delivery Performance</span></h3>
-        <p>
-          <span class="lang-fr">Pipeline ETL complet : extraction Python, KPI logistiques (OTIF, late delivery), analyse des causes de retard, et dashboard Power BI.</span>
-          <span class="lang-en">Complete ETL pipeline: Python extraction, logistics KPIs (OTIF, late delivery), root cause analysis of delays, and Power BI dashboard.</span>
-        </p>
-        <div class="project-tags">
-          <span class="project-tag">Python</span>
-          <span class="project-tag">ETL</span>
-          <span class="project-tag">Power BI</span>
-          <span class="project-tag">KPI</span>
-        </div>
-        <a href="project-supply-chain.html" class="btn-case">
-          <span class="lang-fr">Ouvrir le cas</span><span class="lang-en">Open case</span>
-          <span>→</span>
-        </a>
-      </article>
+    <div class="projects-empty reveal reveal-d2">
+      <div class="empty-icon">🚀</div>
+      <p>
+        <span class="lang-pt">Em breve! Estou construindo meus primeiros projetos de Ciência de Dados. Volte em breve para conferir.</span>
+        <span class="lang-en">Coming soon! I'm building my first Data Science projects. Check back soon.</span>
+      </p>
     </div>
   </div>
 </section>
 
+<!-- Contact -->
 <section class="section" id="contact">
   <div class="section-inner">
     <div class="contact-wrap">
       <div class="section-label reveal" style="text-align:center">
-        <span class="lang-fr">Contact</span><span class="lang-en">Contact</span>
+        <span class="lang-pt">Contato</span><span class="lang-en">Contact</span>
       </div>
       <h2 class="section-title reveal reveal-d1" style="text-align:center">
-        <span class="lang-fr">Disponible pour une mission <span class="nowrap">BA&nbsp;/&nbsp;Data</span></span><span class="lang-en">Available for <span class="nowrap">BA&nbsp;/&nbsp;Data</span> roles</span>
+        <span class="lang-pt">Aberto a oportunidades & conexões</span><span class="lang-en">Open to opportunities & connections</span>
       </h2>
       <p class="contact-desc reveal reveal-d1">
-        <span class="lang-fr">Basé en France, disponible pour des missions BA orientées data (Business / Data Analyst). Un échange rapide par email ou LinkedIn ?</span>
-        <span class="lang-en">Based in France, available for data-driven BA / Data Analyst roles. Shall we have a quick chat via email or LinkedIn?</span>
+        <span class="lang-pt">Sou estudante na UFABC e estou em busca de oportunidades na área de dados — estágio, projetos ou colaborações. Vamos conversar?</span>
+        <span class="lang-en">I'm a student at UFABC looking for opportunities in the data field — internships, projects or collaborations. Let's connect?</span>
       </p>
 
       <div class="contact-btns reveal reveal-d2">
@@ -1190,8 +1177,8 @@ html[data-lang="en"] .project-card::after{
 
         <div class="email-pop" id="emailPop">
           <div class="email-pop-row">
-            <span class="email-addr" id="emailText">rbmidolli@gmail.com</span>
-            <button class="copy-btn" id="copyBtn" type="button" aria-label="Copier">
+            <span class="email-addr" id="emailText">guilherme.midolli@gmail.com</span>
+            <button class="copy-btn" id="copyBtn" type="button" aria-label="Copiar">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
                 <rect x="9" y="9" width="13" height="13" rx="2"/>
                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
@@ -1201,10 +1188,10 @@ html[data-lang="en"] .project-card::after{
           <div class="copy-hint" id="copyHint"></div>
         </div>
 
-        <a class="btn-contact" href="https://www.linkedin.com/in/rafael-midolli/" target="_blank" rel="noopener">
+        <a class="btn-contact" href="https://www.linkedin.com/in/guilherme-midolli-83382b387/" target="_blank" rel="noopener">
           in &nbsp;LinkedIn
         </a>
-        <a class="btn-contact" href="https://github.com/R-midolli" target="_blank" rel="noopener">
+        <a class="btn-contact" href="https://github.com/guilherme-midolli" target="_blank" rel="noopener">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M9 19c-4 1.5-4-2.5-5-3m10 6v-3.5c0-1 .1-1.4-.5-2 2 0 4-.2 5-1 1.2-1 .8-3 .3-4.2A3 3 0 0 0 19 7s-1-.3-3 1.2a10 10 0 0 0-6 0C8 6.7 7 7 7 7a3 3 0 0 0-.3 4.3c-.5 1.2-.9 3.2.3 4.2 1 .8 3 1 5 1-.6.6-.6 1.2-.5 2V22"/>
           </svg>
@@ -1215,9 +1202,10 @@ html[data-lang="en"] .project-card::after{
   </div>
 </section>
 
-<footer class="footer">© 2026 — Rafael Midolli — Portfolio Business Analyst</footer>
+<footer class="footer">© 2026 — Guilherme Midolli — Portfolio Ciência de Dados</footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script src="assets/js/shared.js"></script>
+<script>
 (function(){
   const $ = s => document.querySelector(s);
   const $$ = s => [...document.querySelectorAll(s)];
@@ -1230,7 +1218,6 @@ html[data-lang="en"] .project-card::after{
     scrollBar.style.width = (max > 0 ? (d.scrollTop/max)*100 : 0) + '%';
     $('#mainNav')?.classList.toggle('scrolled', d.scrollTop > 40);
 
-    // Avatar fade-out on scroll - efeito mais suave
     const avatarCol = document.querySelector('.avatar-column');
     if(avatarCol){
       const progress = Math.min(d.scrollTop / ((d.scrollHeight - d.clientHeight) * 0.5), 1);
@@ -1247,9 +1234,9 @@ html[data-lang="en"] .project-card::after{
   }, {threshold:0.12});
   $$('.reveal').forEach(el => io.observe(el));
 
-  // --- scrollspy (SAFE) ---
+  // --- scrollspy ---
   const navLinks = $$('.nav-link');
-  const sections = ['about','skills','projects','contact']
+  const sections = ['about','skills','experience','projects','contact']
     .map(id => document.getElementById(id))
     .filter(Boolean);
 
@@ -1260,7 +1247,6 @@ html[data-lang="en"] .project-card::after{
       navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#'+vis.target.id));
     }
   }, {threshold:[.15,.3,.5], rootMargin:'-15% 0px -55% 0px'});
-
   sections.forEach(s => ioSpy.observe(s));
 
   // --- skills tabs ---
@@ -1270,12 +1256,9 @@ html[data-lang="en"] .project-card::after{
     tabs.addEventListener('click', e => {
       const btn = e.target.closest('.skill-tab');
       if(!btn) return;
-
       $$('.skill-tab').forEach(t => t.classList.remove('active'));
       btn.classList.add('active');
-
       const scope = btn.dataset.tab;
-
       chips.forEach((ch, i) => {
         if (ch.dataset.scope === scope) {
           ch.hidden = false;
@@ -1293,9 +1276,9 @@ html[data-lang="en"] .project-card::after{
   const copyBtn = $('#copyBtn');
   const copyHint = $('#copyHint');
 
-  function getLang(){ return document.documentElement.dataset.lang || 'fr'; }
+  function getLang(){ return document.documentElement.dataset.lang || 'pt'; }
   function setCopyHintDefault(){
-    if(copyHint) copyHint.textContent = getLang() === 'fr' ? 'Cliquez pour copier' : 'Click to copy';
+    if(copyHint) copyHint.textContent = getLang() === 'pt' ? 'Clique para copiar' : 'Click to copy';
   }
 
   if(emailBtn && emailPop){
@@ -1310,10 +1293,10 @@ html[data-lang="en"] .project-card::after{
     copyBtn.addEventListener('click', async () => {
       try {
         await navigator.clipboard.writeText($('#emailText').textContent.trim());
-        if(copyHint) copyHint.textContent = getLang() === 'fr' ? '✓ Copié !' : '✓ Copied!';
+        if(copyHint) copyHint.textContent = getLang() === 'pt' ? '✓ Copiado!' : '✓ Copied!';
         setTimeout(() => setCopyHintDefault(), 1400);
       } catch {
-        if(copyHint) copyHint.textContent = getLang() === 'fr' ? 'Copie impossible' : 'Copy failed';
+        if(copyHint) copyHint.textContent = getLang() === 'pt' ? 'Não foi possível copiar' : 'Copy failed';
       }
     });
   }
@@ -1321,6 +1304,15 @@ html[data-lang="en"] .project-card::after{
   document.addEventListener('click', e => {
     if(!emailPop || !emailPop.classList.contains('show')) return;
     if(!emailPop.contains(e.target) && !emailBtn.contains(e.target)) emailPop.classList.remove('show');
+  });
+
+  // --- timeline cards interactivity ---
+  $$('.timeline-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const wasExpanded = card.classList.contains('expanded');
+      $$('.timeline-card').forEach(c => c.classList.remove('expanded'));
+      if(!wasExpanded) card.classList.add('expanded');
+    });
   });
   document.addEventListener('keydown', e => { if(e.key==='Escape' && emailPop) emailPop.classList.remove('show') });
 
@@ -1334,129 +1326,24 @@ html[data-lang="en"] .project-card::after{
       e.stopPropagation(); 
       bioOverlay.classList.add('show');
     });
-    
     if(bioClose) {
       bioClose.addEventListener('click', e => {
         e.stopPropagation();
         bioOverlay.classList.remove('show');
       });
     }
-    
     bioOverlay.addEventListener('click', e => {
-      if(e.target === bioOverlay) {
-        bioOverlay.classList.remove('show');
-      }
+      if(e.target === bioOverlay) bioOverlay.classList.remove('show');
     });
-    
     document.addEventListener('keydown', e => { 
-      if(e.key==='Escape' && bioOverlay.classList.contains('show')) {
-        bioOverlay.classList.remove('show');
-      }
+      if(e.key==='Escape' && bioOverlay.classList.contains('show')) bioOverlay.classList.remove('show');
     });
   }
 
-  
-  // --- project preview (click on card) ---
-  const previewOverlay = $('#projectPreviewOverlay');
-  const previewCard = previewOverlay ? previewOverlay.querySelector('.project-preview-card') : null;
-  const previewCloseBtn = $('#projectPreviewCloseBtn');
-  const previewTitle = $('#projectPreviewTitle');
-  const previewIframe = $('#projectPreviewIframe');
-  const previewOpenBtn = $('#projectPreviewOpenBtn');
-  const previewLoading = $('#projectPreviewLoading');
-
-  function openProjectPreview(card){
-    if(!previewOverlay) return;
-
-    const openBtn = card.querySelector('.btn-case');
-    if(!openBtn) return;
-
-    const href = openBtn.getAttribute('href');
-    if(!href) return;
-
-    const h3 = card.querySelector('h3');
-    if(previewTitle){
-      previewTitle.innerHTML = h3 ? h3.innerHTML : (getLang()==='fr' ? 'Aperçu du projet' : 'Project preview');
-    }
-    if(previewOpenBtn) previewOpenBtn.href = href;
-
-    if(previewIframe){
-      if(previewLoading) previewLoading.classList.add('show');
-      previewIframe.onload = () => { if(previewLoading) previewLoading.classList.remove('show'); };
-      previewIframe.src = href;
-    }
-
-    previewOverlay.classList.add('show');
-  }
-
-  function closeProjectPreview(){
-    if(!previewOverlay) return;
-    previewOverlay.classList.remove('show');
-    if(previewIframe) previewIframe.src = 'about:blank';
-    if(previewLoading) previewLoading.classList.remove('show');
-  }
-
-  // Open preview when clicking on a project card (except the main button/link)
-  $$('.project-card').forEach(card => {
-    card.addEventListener('click', (e) => {
-      if(e.target.closest('.btn-case')) return; // keep default navigation
-      if(e.target.closest('a')) return; // any link should behave normally
-      openProjectPreview(card);
-    });
-  });
-
-  if(previewCloseBtn) previewCloseBtn.addEventListener('click', closeProjectPreview);
-
-  if(previewOverlay){
-    previewOverlay.addEventListener('click', (e) => {
-      if(previewCard && !previewCard.contains(e.target)) closeProjectPreview();
-    });
-  }
-
-  document.addEventListener('keydown', (e) => {
-    if(e.key === 'Escape' && previewOverlay && previewOverlay.classList.contains('show')) closeProjectPreview();
-  });
-
-
-// --- theme toggle ---
-  const themeBtn = $('#themeToggle');
-  const themeIcon = $('#themeIcon');
-  if(themeBtn && themeIcon){
-    const saved = localStorage.getItem('theme');
-    const initial = saved || 'dark';
-    document.documentElement.dataset.theme = initial;
-    themeIcon.textContent = initial === 'light' ? '☀️' : '🌙';
-    themeBtn.addEventListener('click', () => {
-      const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
-      document.documentElement.dataset.theme = next;
-      localStorage.setItem('theme', next);
-      themeIcon.textContent = next === 'light' ? '☀️' : '🌙';
-    });
-  }
-
-  // --- language toggle ---
-  const langBtn = $('#langToggle');
-  const langIcon = $('#langIcon');
-
-  function setLanguage(lang){
-    document.documentElement.dataset.lang = lang;
-    document.documentElement.lang = lang;
-    localStorage.setItem('lang', lang);
-    if(langIcon) langIcon.textContent = lang === 'fr' ? 'FR' : 'EN';
-    setCopyHintDefault();
-  }
-
-  if(langBtn && langIcon){
-    const savedLang = localStorage.getItem('lang') || 'fr';
-    setLanguage(savedLang);
-    langBtn.addEventListener('click', () => {
-      const next = document.documentElement.dataset.lang === 'fr' ? 'en' : 'fr';
-      setLanguage(next);
-    });
-  }
-
+  // --- sync language ---
+  document.addEventListener('langchange', () => setCopyHintDefault());
+  setCopyHintDefault();
 })();
 </script>
-<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "71c6bc77fe664e55a7bbfb514c5f2fc4"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://guilherme-midolli.github.io/portfolio_guilherme_midolli/sitemap.xml
