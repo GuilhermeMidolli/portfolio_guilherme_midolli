@@ -19,7 +19,7 @@ Site estático voltado para apresentar meu perfil como estudante de Ciência de 
 ## 🌐 Acesso online
 
 Você pode visualizar o portfolio online aqui:
-[https://guilherme-midolli.github.io/portfolio_guilherme_midolli](https://guilherme-midolli.github.io/portfolio_guilherme_midolli)
+[https://guilhermemidolli.github.io/portfolio_guilherme_midolli](https://guilhermemidolli.github.io/portfolio_guilherme_midolli)
 
 ---
 
